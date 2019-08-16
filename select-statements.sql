@@ -41,6 +41,6 @@ SELECT
 	COUNT(*) as message_count
 FROM messages m
 JOIN users u USING (user_id)
-GROUP BY user_id;
+GROUP BY u.user_id WITH ROLLUP;
 
 
